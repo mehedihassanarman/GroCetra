@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>e-Wallet</h1>
+        <!-- To show home icon -->
+        <a href="/home" title="Go to Home" class="home-icon">
+            <img src="/static/images/home.gif" alt="Home" />
+        </a>
+    </header>
+
+    <main>
+        <div class="tab-header">
+            <div class="tab active" data-tab="qr-code">Your QR Code</div>
+            <div class="tab" data-tab="pay">PAY</div>
+        </div>
+        <!-- QR Code Section -->
+        <div id="qr-code" class="tab-content active">
+            {% if qr_code_path %}
+                <img src="{{ qr_code_path }}" alt="QR Code" />
+            {% else %}
+                <p>No QR code available for this user.</p>
+            {% endif %}
+        </div>
+
+        <!-- E-Wallet Section -->
+        <div id="pay" class="tab-content">
+            <p class="pay-description">Add your wallet to convert your points</p>
+            <div class="pay-image-container">
+                <img src="/static/images/wallet.gif" alt="PAY" />
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active classes
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
