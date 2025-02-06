@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        /* Notification styling */
+        .notification {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 15px;
+            background-color: #4caf50; /* Green background */
+            color: white; /* White text */
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure it's above other elements */
+            font-size: 16px;
+        }
+        .notification.error {
+            background-color: #f44336; /* Red background for errors */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GroCetra</h1>
+    </header>
+    <div class="signup-container">
+        <div class="signup-image"></div>
+        <!-- Section of Sign Up Form -->
+        <div class="signup-form">
+            <form id="signupForm" method="POST" action="/signup" onsubmit="return validateForm();">
+                <h2>Sign Up</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Germany">Germany</option>
+                        <option value="UK">UK</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="repeatPassword">Repeat Password</label>
+                    <input type="password" id="repeatPassword" name="repeatPassword" required>
+                </div>
+                <button type="submit" class="signup-button">Sign Up</button>
+            </form>
+            <div class="form-footer">
+                <p>Already have an account? <a href="http://127.0.0.1:5000/">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Notification Container -->
+    <div id="notification" class="notification"></div>
+
+    <script>
+        // Prevent default form submission and handle it with AJAX
+        document.getElementById('signupForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Stop the form from submitting normally
+
+            // Validate the passwords match
+            const password = document.getElementById('password').value;
+            const repeatPassword = document.getElementById('repeatPassword').value;
+            if (password !== repeatPassword) {
+                showNotification('Passwords do not match!', true);
+                return;
+            }
+
+            // To collect form data
+            const formData = new FormData(this);
+
+            try {
+                // Send the form data via AJAX
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                // Parse the response
+                const result = await response.json();
+
+                // Show appropriate notification based on the result
+                if (result.success) {
+                    showNotification(result.message);
+                    resetForm();
+                } else {
+                    showNotification(result.message, true);
+                }
+            } catch (error) {
+                // Handle network errors or unexpected issues
+                showNotification('An error occurred while submitting the form. Please try again later.', true);
+            }
+        });
+
+
+        function resetForm() {
+        const form = document.getElementById('signupForm');
+        form.reset(); // Resets all form fields to their default values
+    }
+
+
+        /**
+         * Function to display a notification.
+         * @param {string} message - The notification message.
+         * @param {boolean} isError - Whether the notification is an error (true for error, false for success).
+         */
+        function showNotification(message, isError = false) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = isError ? 'notification error' : 'notification';
+            notification.style.display = 'block';
+
+            // Hide the notification after 3 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

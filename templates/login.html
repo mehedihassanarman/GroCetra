@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1 class="header-title"><span>Spend  </span>  <span>  Wisely,  </span> <span>  Save   </span> <span> Precisely. </span></h1>
+        <a href="/market_analysis" title="Go to Market Analysis" class="home-icon">
+            <img src="/static/images/market.gif" alt="Market Analysis" />
+        </a>
+    </header>
+    
+
+    <!-- Notification Message Box Design -->
+    <div id="message-box" style="
+        display: none; 
+        padding: 10px; 
+        color: white; 
+        text-align: center; 
+        position: fixed; 
+        top: 10px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        border-radius: 5px; 
+        z-index: 1000;">
+    </div>
+
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="/static/images/app-logo.png" alt="App Logo">
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm" method="POST" action="/login" onsubmit="return handleLogin(event);">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+            <div class="form-footer">
+                <p>New here? <a href="/signup">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function handleLogin(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const result = await response.json();
+            const messageBox = document.getElementById('message-box'); // Message box for notifications
+
+            if (response.ok) {
+                // Show a success message
+                messageBox.textContent = 'Login successful! Redirecting...';
+                messageBox.style.backgroundColor = '#4CAF50'; // Green background for success
+                messageBox.style.display = 'block';
+
+                // Redirect to home after a short delay
+                setTimeout(() => {
+                    window.location.href = '/home';
+                }, 1500); // 1.5 seconds delay
+            } else {
+                // Show an error message
+                messageBox.textContent = result.message || 'Login failed! Please check your username and password.';
+                messageBox.style.backgroundColor = '#e74c3c'; // Red background for error
+                messageBox.style.display = 'block';
+
+                // Automatically hide the message after 3 seconds
+                setTimeout(() => {
+                    messageBox.style.display = 'none';
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>
