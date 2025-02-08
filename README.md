@@ -1,6 +1,8 @@
 # GroCetra
 _AI-Powered Price Forecasting and Smart Shopping Strategies to Maximize Savings on Consumer Goods._
 
+!https://github.com/mehedihassanarman/GroCetra/blob/main/static/images/app-logo.png
+
 Amid rising inflation and economic challenges, middle- and lower-income households in Germany are facing increasing difficulties in managing grocery expenses. Our application addresses this issue by enabling users to identify the most cost-effective yet high-quality grocery options. By aggregating and comparing prices across leading supermarkets in Germany, the app ensures that consumers can access the best deals without compromising on quality, thereby optimizing their purchasing decisions and reducing overall grocery costs.
 
 Beyond price comparison, the app incorporates advanced price prediction capabilities. Utilizing historical data and sophisticated forecasting models, it provides insights into future price trends for various grocery items. This allows users to plan their purchases strategically, fostering smarter shopping habits and mitigating the financial impact of inflation.
