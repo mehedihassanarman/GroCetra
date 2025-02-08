@@ -9,4 +9,4 @@ Beyond price comparison, the app incorporates advanced price prediction capabili
 
 Additionally, the app includes an expense tracking feature to support effective financial management, helping users monitor and control their grocery expenditures efficiently. Our mission is to enhance price transparency, empower informed financial decision-making, and promote sustainable shopping practices, ultimately providing meaningful relief to consumers in a challenging economic landscape.
 
-Required Python Version 3.10.10
+Required Python Version 3.10.10 ad check the required libraries from requirement.txt
