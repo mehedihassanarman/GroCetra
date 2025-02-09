@@ -1,0 +1,23 @@
+Serial_Number,Item_Code,Item_Name,Item_English_Name,Price_for_Tomorrow,Price_After_7_Days,Price_After_1_Month
+1,101,Allgäuer Hof-Milch Butter mild gesäuert 250g,Soured Butter,3.0888138,3.5895782,2.609828
+2,201,Bio Aubergine 1 Stück,Eggplant,1.2911795,1.2899231,1.3089002
+3,301,Blumenkohl weiß 1 Stück,White Cauliflower,3.7178054,3.6889927,3.4516501
+4,401,Broccoli 500g,Broccoli,1.7860938,1.7859676,1.7899734
+5,501,Eisbergsalat 1 Stück,Iceberg Lettuce,1.1898478,1.2852852,1.1648886
+6,601,Galiamelone 1 Stück,Galia Melon,1.9902126,1.7906408,2.4342291
+7,701,Karotten 1kg,Carrots,1.1906409,0.7601689,1.1872913
+8,801,"Kartoffeln vorwiegend festkochend 2,5kg",Potatoes,1.9899089,1.9916258,2.0431902
+9,901,Mango vorgereift 1 Stück,Mango,1.2898065,1.2915596,1.000016
+10,1001,Meggle Feine Butter 250g,Fine Butter,3.5893219,2.47194,3.5927472
+11,1101,Orangen 2kg im Netz,Oranges,2.6901135,2.6534603,2.6671216
+12,1201,REWE Beste Wahl Feinschmecker Hähnchen 1200g,Chicken,5.7898517,5.7898517,5.5905137
+13,1301,REWE Bio Zucchini 500g,Zucchini,2.8028762,2.797232,2.791428
+14,1401,Rewe Beste Wahl Eier aus Freilandhaltung 10 Stück,Eggs,2.689854,2.689854,2.590261
+15,1501,Rispentomaten ca. 100g,Tomatoes,0.2499996,0.25011164,0.24532348
+16,1601,Spitzkohl ca. 1kg,Cabbage,2.5900686,1.9899318,2.4124122
+17,1701,Tafeltrauben hell kernlos 500g,Table Grapes,2.2835267,1.987302,2.2778218
+18,1801,Zitronen 500g im Netz,Lemons,0.9957656,1.0896605,0.9692872
+19,1901,Zwiebeln 2kg im Netz,Onions,1.5895905,1.5930444,1.2930206
+20,2001,ja! Basmati Reis 1kg,Basmati Rice,2.9898086,2.9898086,2.7908688
+21,2101,"ja! H-Milch 3,5% 1l",Milk 3.5%,1.0898767,1.0898767,1.0503538
+22,2201,ja! Sonnenblumenöl 1l,Sunflower Oil,1.5899827,1.5899827,1.4904693
