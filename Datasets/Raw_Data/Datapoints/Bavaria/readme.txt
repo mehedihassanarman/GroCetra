@@ -1,0 +1,1 @@
+You need to download all datapoints from "https://rewe.nicoo.org/" for Bavaria State.
