@@ -195,7 +195,7 @@ if __name__ == "__main__":
     # Create a database for Schleswig Holstein State
     Holstein_path = "Datasets/Raw_Data/Datapoints/Schleswig-Holstein/"
     Holstein_file = "Datasets/Raw_Data/grocery_items_Schleswig_Holstein.csv"
-    #process_schleswig_holstein_data(Holstein_path, Holstein_file)
+    process_schleswig_holstein_data(Holstein_path, Holstein_file)
 
 
     # Create a database for Combined State
@@ -204,7 +204,7 @@ if __name__ == "__main__":
         "Schleswig-Holstein": "Datasets/Raw_Data/Datapoints/Schleswig-Holstein/"
     }
     combined_states_file = "Datasets/Raw_Data/grocery_items_two_state.csv"
-    #process_combined_states_data(folders, combined_states_file)
+    process_combined_states_data(folders, combined_states_file)
 
 
     # Take Bavaria Database to train model
