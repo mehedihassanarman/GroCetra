@@ -1,0 +1,74 @@
+{
+    "netto": {
+        "base_url": "https://www.netto-online.de/INTERSHOP/web/WFS/Plus-NettoDE-Site/de_DE/-/EUR/ViewMMPParametricSearch-SimpleOfferSearch?SearchTerm={}&Region=1&MeatMarketType=2&KW=03",
+        "static_urls": [
+            "https://www.netto-online.de/marken/biobio",
+            "https://www.netto-online.de/filialangebote/1/30589",
+            "https://www.netto-online.de/filialangebote/1/30594",
+            "https://www.netto-online.de/filialangebote/1/30596",
+            "https://www.netto-online.de/filialangebote/1?StoreID=8079&PreviousRedirect=true",
+            "https://www.netto-online.de/filialangebote/2/30602",
+            "https://www.netto-online.de/filialangebote/2/30592",
+            "https://www.netto-online.de/filialangebote/2/30614",
+            "https://www.netto-online.de/filialangebote/5"
+        ],
+        "keywords": [
+            "Frau Antje Beste Butter", "Blumenkohl", "Broccoli", "Eisbergsalat",
+            "Galiamelone", "Karotten", "Kartoffeln", "pürierte Mango", "Meggle Feine Butter",
+            "Orangen", "Zucchini", "Eier", "Rispentomaten", "Spitzkohl", "Tafeltrauben hell kernlos",
+            "Zitronen", "Zwiebeln", "Basmati Reis"
+        ]
+    },
+    "aldi": {
+        "static_urls": [
+            "https://www.aldi-nord.de/sortiment/kuehlung-tiefkuehlung/kaese-milch-milchprodukte/butter-sahne-sauerrahm.html",
+            "https://www.aldi-nord.de/angebote/aktion-do-02-01/aubergine-1013323-0-0.article.html",
+            "https://www.aldi-nord.de/sortiment/obst-und-gemuese.html",
+            "https://www.aldi-nord.de/angebote.html#2025-01-13",
+            "https://www.aldi-nord.de/angebote/aktion-mo-16-12/tafeltrauben-hell-6236-0-0.article.html",
+            "https://www.aldi-nord.de/angebote/aktion-do-19-12/brokkoli-6270-0-0.article.html"
+        ],
+        "keyword_url": "https://www.aldi-nord.de/suchergebnisse.html?query={}&searchCategory=Submitted%20Search",
+        "search_terms": [
+            "Butter", "Bio%20Aubergine", "Blumenkohl", "Broccoli", "Eisbergsalat",
+            "Galiamelone", "Karotten", "Kartoffeln", "pürierte%20Mango",
+            "Orangen", "Zucchini", "Eier%20", "Rispentomaten", "Spitzkohl", "trauben",
+            "Zitronen", "Zwiebeln", "Basmati%20Reis", "Hähnchen"
+        ]
+    },
+    "rewe": {
+        "base_url": "https://shop.rewe.de/productList?search={}",
+        "search_terms": [
+            "Hof-Milch Butter mild 250g",
+            "Bio Aubergine",
+            "Blumenkohl weiß",
+            "Broccoli 500g",
+            "Eisbergsalat",
+            "Galiamelone",
+            "Karotten 1kg",
+            "Kartoffeln vorwiegend festkochend 2,5kg",
+            "Mango vorgereift",
+            "Meggle Feine Butter 250g",
+            "Orangen 2kg im Netz",
+            "REWE Beste Wahl Feinschmecker Hähnchen 1200g",
+            "REWE Bio Zucchini 500g",
+            "Rewe Beste Wahl Eier aus Freilandhaltung",
+            "Rispentomaten ca. 100g",
+            "Spitzkohl ca. 1kg",
+            "Tafeltrauben hell kernlos 500g",
+            "Zitronen 500g im Netz",
+            "Zwiebeln 2kg im Netz",
+            "ja! Basmati Reis 1kg"
+        ]
+    },
+    "kaufland": {
+        "base_url": "https://www.kaufland.de/s/?sortby=price-asc&search_value={}",
+        "search_terms": [
+            "Hof-Milch%20Butter", "Bio%20Aubergine%20", "Blumenkohl", "Broccoli", "Eisbergsalat",
+            "Galiamelone", "Karotten", "Hofgut%20ganze%20Karotten", "Kartoffeln", "pürierte%20Mango",
+            "Meggle%20Feine%20Butter", "Orangen", "Hähnchen", "Zucchini", "Eier",
+            "Rispentomaten", "Spitzkohl", "Tafeltrauben%20hell%20kernlos", "Zitronen",
+            "Zwiebeln", "Basmati%20Reis"
+        ]
+    }
+}
